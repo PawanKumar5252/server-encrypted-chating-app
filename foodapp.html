@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <script type="text/javascript">
+         function place_Order(){
+              
+           //document.getElementById(order summary).style.display="block";
+
+           uname=document.getElementById("txtname").value;
+           mobile=document.getElementById("txtmobile").value;
+           Burger=document.getElementById("id_burger").value;
+           Sandwich=document.getElementById("id_sandwich").value;
+           Butterchicken=document.getElementById("id_butterchicken").value;
+           Samosa=document.getElementById("id_samosa").value;
+           Kadaipaneer=document.getElementById("id_kadaipaneer").value;
+           Panipuri=document.getElementById("id_panipuri").value;
+           Vada=document.getElementById("id_vada").value;
+           Thumsup=document.getElementById("id_thumsup").value;
+           
+           var mcost=0;
+           var acost=0;
+           var mname=" ";
+           var aname=" ";
+           if(id_burger.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=120*i;
+             mname=Burger.value;
+             document.getElementById("userproduct").innerHTML=Burger;
+           }
+           if(id_sandwich.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=150*i;
+             mname=Sandwich.value;
+             document.getElementById("userproduct").innerHTML=Sandwich;
+           }
+           if(id_thumsup.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=50*i;
+            // mcost+=acost;
+             aname+=Thumsup.value+"<br>";
+             document.getElementById("userproduct").innerHTML=Thumsup;
+           }
+           if(id_butterchicken.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=170*i;
+             //mcost+=acost;
+             aname+=Thumsup.value+"<br>";
+             document.getElementById("userproduct").innerHTML=Butterchicken;
+           }
+           if(id_samosa.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=20*i;
+             //mcost+=acost;
+             aname+=Thumsup.value+"<br>";
+             document.getElementById("userproduct").innerHTML=Samosa;
+           }
+           if(id_kadaipaneer.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=140*i;
+             //mcost+=acost;
+             aname+=Thumsup.value+"<br>";
+             document.getElementById("userproduct").innerHTML=Kadaipaneer;
+           }
+           if(id_panipuri.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=10*i;
+             //mcost+=acost;
+             aname+=Thumsup.value+"<br>";
+             document.getElementById("userproduct").innerHTML=Panipuri;
+           }
+           if(id_vada.checked){
+             i=document.getElementById("quantity").value;
+             mcost+=60*i;
+             //mcost+=acost;
+             aname+=Thumsup.value+"<br>";
+             document.getElementById("userproduct").innerHTML=Vada;
+           }
+           
+            alert(mcost);
+            var cost=mcost;
+           document.getElementById( "username").innerHTML=uname;
+           document.getElementById("usermobile").innerHTML=mobile;
+           document.getElementById("userprice").innerHTML=cost;
+           
+          //   document.getElementById("lbladd").innerHTML=aname;
+          //    document.getElementById("lblAmount").innerHTML=mcost;
+             
+         }
+       </script>
+   </head>
+  <body>
+    <div>
+      
+    <table width="100"  cellspacing="4" cellpadding="4" align="left" id="description">
+      <tr>
+             <td colspan="2" >About</td> 
+      </tr>
+      <tr>
+             <td colspan="2">Servicess</td> 
+      </tr>
+      <tr>
+             <td colspan="2">Cuisine</td> 
+      </tr>
+      <tr>
+             <td colspan="2">Gallary</td> 
+      </tr>
+      <tr>
+             <td colspan="2">Contect</td> 
+      </tr>
+      <tr>
+             <td colspan="2">Block</td> 
+      </tr>
+      <tr>
+             <td><input type="button" value="Cart"></td> 
+      </tr>
+
+          <font size="6">
+         <table width="1200" border="2" cellspacing="4" cellpadding="4" align="center"  id="orderform"> 
+          
+           <tr>
+             <td colspan="2" align="center">customer details</td> 
+           </tr>
+           <tr>
+             <td>Customer Name</td> 
+             <td><input type="text" id="txtname"></td>
+           </tr>
+           <tr>
+             <td>mobile</td> 
+             <td><input type="text" id="txtmobile"></td>
+           </tr>
+           <tr>
+             <td>Select meals</td> 
+           </tr>
+           
+            <tr>
+              <td>
+                <img src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" width="100" hight="100">>
+                <br>
+                <input type="checkbox" name="meal" id="id_burger" value="burger">Burger(&#8377;120/-)
+                <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>     
+              </td>
+             <td>
+                <img src="https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mzl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="100" hight="100">>
+               <br>
+               <input type="checkbox" name="meal" id="id_sandwich" value="sandwich">Sandwich(&#8377;150/-)
+               <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+              </td>
+             <td>
+                <img src="https://cdn.backyardgoats.iamcountryside.com/wp-content/uploads/sites/2/2019/03/goat-curry-shutterstock_776742361-e1536711914244.jpg" width="100" hight="100">>
+               <br>
+               <input type="checkbox" name="meal" id="id_butterchicken" value="butterchicken">Butter chicken(&#8377;170/-)
+               <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+              </td>
+             <td>
+                <img src="https://cdn.tasteatlas.com/images/toplistarticles/d0e6a0a79d5f4197a51f4ca065393ffe.jpg?w=375&h=280" width="100" hight="100">
+               <br>
+               <input type="checkbox" name="meal" id="id_kadaipaneer" value="kadaipaneer">kadai paneer(&#8377;140/-)
+               <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+              </td>
+             <td>
+                <img src="https://sukhis.com/wp-content/uploads/2017/06/Appetizers.jpg" width="100" hight="100">>
+               <br>
+               <input type="checkbox" name="meal" id="id_samosa" value="samosa">Samosa(&#8377;20/-)
+               <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+              </td>
+             <td>
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201708/dish-story_647_081417052301.jpg" width="100" hight="100">
+               <br>
+               <input type="checkbox" name="meal" id="id_panipuri" value="panipuri">Pani puri(&#8377;10/-)
+               <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+              </td>
+             <td>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2O9THM0z4W-4tGkEENXIwzvZ4LOhflY12bQ&usqp=CAU" width="100" hight="100">
+               <br>
+               <input type="checkbox" name="meal" id="id_vada" value="vada">Vada(&#8377;60/-)
+               <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+              </td>
+           </tr>
+           <tr>
+             <td cplspan="2">
+               Select Ad-on's
+             </td> 
+             <tr>
+               <td>
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx9qleWQRuf1oszZyOwkV4Y9YKsbyjyG2ZtQ&usqp=CAU" width="100" hight="100">>
+                 <br>
+                 <input type="checkbox" id="id_thumsup" value="thumsup">Thums up(&#8377;50/-)
+                 <br>
+                  <label>Choose Plate :</label>
+                    <select name="quantity" id="quantity">
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                    </select>
+               </td>  
+             </tr> 
+           <tr>
+             <td>
+                <button class="btn2" type="button" onclick="place_Order()">place_Order</button>
+             </td>
+           </tr>
+           
+         </tr>
+         </table> 
+    </table>  
+
+     <h2 padding-left="50">Order Summary</h2>
+    <table table width="1200" border="2" cellspacing="4" cellpadding="4" align="center"  id="order summary">
+       <tr>
+          <td>Name :-<td id="username"></td></td>
+       </tr>
+       <br>
+        <tr>
+          <td>Mobile number :- <td id="usermobile"></td></td>
+       </tr>
+       <tr>
+          <td>product name:- <td id="userproduct"></td></td>
+       </tr>
+       <tr>
+          <td>Totle price:- <td id="userprice"></td></td>
+       </tr>
+    </table>   
+         <!-- <dl id="order summary" style="display:none;">
+             <h2>Order Summary</h2>
+             <dt>Customer Name</dt>
+             <dd id="lblName"></dd>
+             <dt>mobile</dt>
+             <dd id="lblmobile"></dd>
+             <dt>Meal</dt>
+             <dd id="lblMeal"></dd>
+             <dt>AD on's</dt>
+             <dd id="lbladd"></dd>
+             <dt>Total bill amount</dt>
+             <dd id="lblAmount"></dd>
+             <br>
+             <onput type="button" value="print bill" on click="window.print()">
+             
+         </dl>  -->
+
+    </div>  
+  </body>
+</html>
